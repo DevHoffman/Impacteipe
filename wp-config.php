@@ -19,17 +19,18 @@
  */
 
 // ** Configurações do banco de dados - Você pode pegar estas informações com o serviço de hospedagem ** //
+
+/** Nome do host do MySQL */
+define('DB_HOST', 'mysql.impacteipe.kinghost.net');
+
 /** O nome do banco de dados do WordPress */
 define( 'DB_NAME', 'impacteipe' );
 
-/** Usuário do banco de dados MySQL */
-define( 'DB_USER', 'root' );
-
 /** Senha do banco de dados MySQL */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'z485Jyo7Gtz3' );
 
-/** Nome do host do MySQL */
-define( 'DB_HOST', 'localhost' );
+/** Usuário do banco de dados MySQL */
+define('DB_USER', 'impacteipe');
 
 /** Charset do banco de dados a ser usado na criação das tabelas. */
 define( 'DB_CHARSET', 'utf8mb4' );
