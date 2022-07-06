@@ -1,0 +1,296 @@
+:root {
+    --Primary0: #ed5565;
+    --Primary1: #a1131d;
+    --Dark: #111;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--Dark);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--Primary1);
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--Primary0);
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+/* Pre Loader */
+#preloader {
+    background-color: var(--Dark);
+}
+
+#preloader .line-scale-party>div {
+    background-color: var(--Primary0);
+}
+
+/* ========= */
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, .2);
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar * {
+    color: white;
+}
+
+.navbar .navbar-brand img {
+    height: 80px;
+}
+
+.navbar .offcanvas {
+    transition: all .5s;
+}
+
+.navbar .offcanvas button {
+    border: 0;
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: var(--bs-navbar-toggler-icon-bg);
+}
+
+.navbar .btn-outline-light {
+    border: 0;
+    position: relative;
+}
+
+.navbar .btn-outline-light:hover,
+.navbar .btn-outline-light:focus,
+.navbar .btn-outline-light:active {
+    background-color: transparent;
+    color: inherit;
+    outline: none;
+    box-shadow: unset;
+}
+
+.after::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 0;
+    transition: all 1s;
+    border-bottom: 1px solid white;
+}
+
+.after:hover:after {
+    width: 100%;
+}
+
+@media screen and (max-width: 440px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, .5);
+    }
+}
+
+/* ====== */
+
+/* Bloco Cabeçalho / Topo */
+#bloco-topo {
+    height: 100vh;
+    background-image: url('../img/banner-1.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    /* position: relative; */
+}
+
+#bloco-topo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+
+#bloco-topo .btn-outline-light {
+    border: 0;
+    position: relative;
+    padding: 15px 30px;
+    position: absolute;
+    bottom: 5vh;
+    z-index: 9;
+    font-weight: bold;
+}
+
+#bloco-topo .btn-outline-light:hover,
+#bloco-topo .btn-outline-light:focus,
+#bloco-topo .btn-outline-light:active {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    box-shadow: unset;
+}
+
+@media screen and (max-width: 440px) {
+    #bloco-topo {
+        background-image: url('../img/banner-1-mobile.png');
+    }
+
+    #bloco-topo .btn-outline-light {
+        bottom: 0;
+        padding-bottom: 3rem;
+        width: 100%;
+        left: 0;
+    }
+}
+
+/* ====================== */
+
+/* Bloco Artistas */
+
+/* Artista 1 */
+#artistas a:nth-child(1n) .figure {
+    background-image: url('../img/artistas/goutt.png');
+}
+
+#artistas a:hover:nth-child(1n) .figure {
+    background-image: url('../img/artistas/goutt2.png');
+}
+
+/* ======== */
+
+/* Artista 2 */
+#artistas a:nth-child(2n) .figure {
+    background-image: url('../img/artistas/tenan.png');
+}
+
+#artistas a:hover:nth-child(2n) .figure {
+    background-image: url('../img/artistas/tenan2.png');
+}
+
+/* ======== */
+
+/* Artista 3 */
+#artistas a:nth-child(3n) .figure {
+    background-image: url('../img/artistas/gogui.png');
+}
+
+#artistas a:hover:nth-child(3n) .figure {
+    background-image: url('../img/artistas/gogui2.png');
+}
+
+/* ======== */
+
+.figure {
+    position: relative;
+    /* margin: 0 !important; */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px rgb(0 0 0 / 25%);
+    width: 100%;
+    height: 333px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.figure,
+.figure img {
+    margin: 0;
+}
+
+.figure-caption {
+    background-color: rgba(0, 0, 0, .5);
+    display: grid;
+    align-items: end;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 0%;
+    height: 100%;
+    transition: all .5s;
+    opacity: 1;
+}
+
+.figure:hover {
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+}
+
+.figure:hover .figure-caption {
+    opacity: 0;
+}
+
+.figure .figure-caption i {
+    text-align: center;
+}
+
+.figure .figure-caption i::before {
+    font-size: 30px;
+}
+
+.figure .figure-caption h3 {
+    margin: 0;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+@media screen and (max-width: 992px) {
+
+    #artistas a:nth-of-type(2),
+    #artistas a:nth-of-type(3) {
+        margin-top: 2rem;
+    }
+}
+
+/* ============== */
+
+/* Bloco Eventos */
+#eventos p {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #eventos .imagem {
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #eventos .texto {
+        height: 100%;
+        padding-right: 0;
+    }
+}
+
+/* ============= */
+
+/* Bloco Rodapé */
+
+#rodape>a,
+#rodape ul li {
+    position: relative;
+}
+
+/* ============ */
